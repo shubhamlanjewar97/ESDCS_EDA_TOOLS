@@ -287,7 +287,7 @@ mkdir -p /Users/shubhamlanjewar/code/esdcs_docker
 
 ---
 
-### Step 5: Pull the Docker Image from Docker Hub
+### Step 5: Download and load Docker Image
 
 Download the Docker image tar file.
 
