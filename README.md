@@ -302,6 +302,12 @@ To load the Docker image (for Apple silicon), go to the location where `.tar` fi
 ```bash
 docker load -i esdcs-ubuntu-img.tar
 ```
+alternatively, you can use the following command(only for Apple silicon), in this case, you won't need the .tar file (we are pulling the image from DockerHub account):
+```bash
+docker pull shubhamlanjewar97/esdcs-ubuntu-img:latest
+```
+
+
 For Intel processor, run:
 ```bash
 docker load -i esdcs-ubuntu-img-intel.tar
