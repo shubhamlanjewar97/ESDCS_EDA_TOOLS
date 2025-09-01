@@ -72,7 +72,7 @@ Either this Google Drive Link(generally faster): [![Google Drive](https://img.sh
 
 OR  from One Drive Link: [![OneDrive](https://img.shields.io/badge/OneDrive-blue?logo=microsoft-onedrive&logoColor=white)](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/shubhaml_iisc_ac_in/Eb3L3PkAOZBMtYQH9pJAQqsBrpyRsw5gBYMe7jH5dtrj4g?e=DRUdzv)  
 
-For OpenRoad, download the .ova file from Annexure B.
+For OpenRoad, download the .ova file from Annexure B. (This is optional. You won't need this for course assignments and project. We shall tell about it in Lab session)
 
 #### Step 3: Import Appliance in VirtualBox
 1. Open **VirtualBox**  
