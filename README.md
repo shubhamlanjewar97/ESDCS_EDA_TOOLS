@@ -95,13 +95,20 @@ It has preinstalled tools (iverilog, gtkwave, opensta, yosys). It also has folde
 
 
 
-#### Step 5: Other few setups
+#### Step 5: Setting up Shared Folder
 
-To setup **shared folders** and to do **other few setups**, you can go through `Step 7` onwards of `Option 3 : Installing Ubuntu 22.04.5 in VirtualBox`.
-Same steps are followed in the following video from timestamp 7:58 onwards.
+Enable shared folder  
+ `Devices > Shared Folders`  
+ Choose a Windows folder that you want to share with Ubuntu. Check Auto-mount and Make Permanent options.
+ Then open a terminal and enter the following command
+ 
+ ```bash
+sudo adduser $USER vboxsf
+```
+Steps to set up the Shared Folder are shown in the following video from timestamp 9:25 onwards.
 
-📺 **Video Walkthrough(from 7:58 onwards):** [Ubuntu on VM few setups (7:58 onwards)](https://youtu.be/E_-FE6aHIUA?t=477))  
-[![Watch on YouTube](https://img.shields.io/badge/Watch%20Now-red?logo=youtube&logoColor=white)](https://youtu.be/E_-FE6aHIUA?t=477)
+📺 **Video Walkthrough(from 9:25 onwards):** [Ubuntu on VM few setups (9:25 onwards)](https://youtu.be/E_-FE6aHIUA?t=565)  
+[![Watch on YouTube](https://img.shields.io/badge/Watch%20Now-red?logo=youtube&logoColor=white)](https://youtu.be/E_-FE6aHIUA?t=565))
     
 ---
 
