@@ -1,11 +1,11 @@
-# 🧰 EDA Tools Installation — ESDCS 2025
+# 🧰 EDA Tools Installation — E0 217 ESDCS
 ---
 
 ## Scope of this repo
 This includes **only the installation** of the required tools.  
 **How to use** these tools is already explained clearly in the **Tutorial PDF shared on Microsoft Teams**, so we **won’t repeat usage steps here**.
 
-- **Git Repo Link**: [Link to this git repository](https://github.com/shubhamlanjewar97/ESDCS_EDA_TOOLS)  
+- **Git Repo Link**: [Link to this git repository](https://github.com/shubhamlanjewar97/ESDCS_EDA_TOOLS) 
 ---
 
 ## Version Specs
@@ -68,9 +68,7 @@ Download from: [VirtualBox Download](https://www.virtualbox.org/wiki/Downloads)
 
 Download the `.ova` file for preinstalled apps from 
 
-Either this Google Drive Link(generally faster): [![Google Drive](https://img.shields.io/badge/Google%20Drive-34A853?logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1_P-tEtRUpTZADc26KuqlRG38UXV6wA_J/view?usp=sharing)
-
-OR  from One Drive Link: [![OneDrive](https://img.shields.io/badge/OneDrive-blue?logo=microsoft-onedrive&logoColor=white)](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/shubhaml_iisc_ac_in/Eb3L3PkAOZBMtYQH9pJAQqsBrpyRsw5gBYMe7jH5dtrj4g?e=DRUdzv)  
+Google Drive Link: [![Google Drive](https://img.shields.io/badge/Google%20Drive-34A853?logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1TcOnpjCnTXO8srmuOn0vr1XODIpAz0az/view?usp=sharing)
 
 For OpenRoad, download the .ova file from Annexure B. (This is optional. You won't need this for course assignments and project. We shall tell more about it in the Lab session)
 
@@ -119,13 +117,21 @@ Steps to set up the Shared Folder are shown in the following video from timestam
 [![Watch on YouTube](https://img.shields.io/badge/Watch%20Now-red?logo=youtube&logoColor=white)](https://youtu.be/qvrV6PENzNk)
 
 
+
 #### Step 1: Enable WSL and Install Ubuntu 22.04.5
 Open CMD or PowerShell as Administrator and run:
 ```powershell
 wsl --install -d Ubuntu-22.04
 ```
+After running the above command, if you get error like `WslRegisterDistribution failed with error: 0x80370114 Error: 0x80370114 The operation could not be started because a required feature is not installed.` Then run the following commands.
 
-Restart if prompted.
+```powershell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Hyper-V-All /all /norestart
+bcdedit /set hypervisorlaunchtype Auto
+```
+Then reboot. Then again try the first command.
 
 #### Step 2: Open Ubuntu (WSL shell)
 From the **Start Menu**, search and open **Ubuntu 22.04 LTS**, or run the following command in CMD:
@@ -138,6 +144,7 @@ wsl
 Inside Ubuntu shell:
 ```bash
 sudo apt update
+sudo apt upgrade
 sudo apt install -y iverilog yosys opensta gtkwave 
 ```
 
@@ -240,8 +247,8 @@ mkdir -p /Users/shubhamlanjewar/code/esdcs_docker
 
 Download the Docker image tar file.
 
-For Apple Silicon: `esdcs-ubuntu-img.tar` [esdcs-ubuntu-img.tar](https://drive.google.com/file/d/1qZJMRKNXvw5iDqVb7cYXbC5-fPgOxV6w/view?usp=sharing)  
-For Intel Processor: `esdcs-ubuntu-img-intel.tar` [esdcs-ubuntu-img-intel.tar](https://drive.google.com/file/d/10NArIqpWZQnXYdUfpdW8AeEayYwmeTc3/view?usp=sharing)  
+For Apple Silicon: `esdcs-ubuntu-img.tar` [esdcs-ubuntu-img.tar](https://drive.google.com/file/d/1KC3WvvtfOk1EqfyCcwYt11UYfv6uCh1o/view?usp=sharing)  
+For Intel Processor: `esdcs-ubuntu-img-intel.tar` [esdcs-ubuntu-img-intel.tar](https://drive.google.com/file/d/1sWtr6MWsvSRsL9LkmINIU2ok0UTsdrWC/view?usp=sharing)  
 
 This Docker image contains:  
 - **Ubuntu** (22.04.5 LTS), **Preinstalled tools** (iverilog, yosys, opensta, lsb_release, git, curl, vim, sudo, bash)
@@ -318,7 +325,7 @@ Apart from installing these tools, you will need the following two folders to fo
 Download the following .ova file for OpenRoad.
 
 
-Ubuntu 22.04 with OpenRoad: [![Google Drive](https://img.shields.io/badge/Google%20Drive-34A853?logo=googledrive&logoColor=white)](https://drive.google.com/file/d/13iMlf2kCIFxmXj3jm3btuuTqrlR0XK00/view?usp=sharing)
+Ubuntu 22.04 with OpenRoad: [![Google Drive](https://img.shields.io/badge/Google%20Drive-34A853?logo=googledrive&logoColor=white)](https://drive.google.com/file/d/10v-Vd8ko0wSxDf4Dp-N8UwcSCcY0qUrN/view?usp=sharing)
 
 ---
 
@@ -351,7 +358,7 @@ docker rm esdcs-ubuntu
 ---
 
 ## Quick Links
-- **Git Repo Link**: [EDA Tools Installation](https://github.com/shubhamlanjewar97/ESDCS_EDA_TOOLS)  
+- **Git Repo Link**: [EDA Tools Installation](https://github.com/shubhamlanjewar97/ESDCS_EDA_TOOLS) 
 - **Tutorial PDF**: Available on Microsoft Teams
 ---
 
